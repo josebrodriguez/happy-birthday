@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happpy Birthday, Merlot</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffd1dc;
+            color: #333;
+        }
+        .content {
+            padding: 50px;
+        }
+        .bordered-row {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffd1dc;
+        }
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #333;
+        }
+        .social-icons a:hover {
+            color: #000;
+        }
+        .gradient-border-wrapper {
+            position: relative;
+            display: inline-block;
+            border-radius: 10px;
+            overflow: hidden; /* Ensure the gradient doesn't overflow */
+        }
+        .gradient-border-wrapper:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(243, 236, 120, 0.8), rgba(175, 66, 97, 0.8));
+            z-index: 1;
+            pointer-events: none; /* Ensure it doesn't block interactions */
+            opacity: 0; /* Start with no opacity for the fade effect */
+            transition: opacity 0.5s ease-in-out; /* Smooth transition for fade effect */
+        }
+        .gradient-border-wrapper:hover:before {
+            opacity: 1; /* Full opacity on hover */
+        }
+        .gradient-border-wrapper img {
+            position: relative;
+            z-index: 2; /* Ensure the image is above the gradient */
+            display: block;
+            border-radius: 10px;
+        }
+        .raleway-paragraph {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400; /* Choose the appropriate weight */
+            font-style: normal;
+        }
+        .modal-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .gallery-row {
+            margin-right: -5px;
+            margin-left: -5px;
+        }
+        .gallery-column {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .btn-transparent {
+            background-color: transparent;
+            border: 1px solid #007bff;
+            color: #007bff;
+            width: 100%;
+        }
+
+        .btn-transparent:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .gifs-row {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        .gifs-column {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .memory-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .memory-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .memory-text {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container content">
+
+        <div class="bordered-row">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="title">Merlot,</h1>
+                    <p class="raleway-paragraph">Today is your birthday. You are officially 22, which means it’s a perfect night to <a href="https://www.pinterest.com/shopfogartyrose/">dress up like hipsters</a>, <a href="https://open.spotify.com/track/2U3jOPfO4wZZFaaWS4Dcj6?si=04588523ee834933">make fun of your exes</a>, have <a href="https://youtu.be/2DIlVu4DgoQ?feature=shared">breakfast at midnight</a>, and <a href="https://app.hallow.com/collections/388">fall in love with strangers</a>.</p>
+                    <p class="raleway-paragraph">If you don't feel like doing any of that today I hope you have a happy and blessed birthday regardless. Now, enjoy this website I coded to celebrate you.</p>
+                    <p class="raleway-paragraph">-Jose.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/merlot.jpg" alt="Birthday Image" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="img/22.jpg" alt="Birthday Image" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bordered-row mt-4">
+            <h2 class="title">Birthday GIFs</h2>
+            <embed src="audio/22.mp3" loop="true" autostart="true" width="2" height="0">
+            <div class="row gifs-row">
+                <div class="col-md-6 gifs-column mb-4">
+                    <iframe src="https://giphy.com/embed/sbIwMh2KkEMRG" width="480" height="305" style="width: 100%;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                    <div class="hidden">
+                        <iframe src="https://giphy.com/embed/yKwRdZFTrH6zS" width="480" height="274" style="width: 100%;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <iframe src="https://giphy.com/embed/xUPOqoTj012MtwCmqI" width="480" height="360" style="width: 100%;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <iframe src="https://giphy.com/embed/WRL7YgP42OKns22wRD" width="480" height="398" style="width: 100%;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <img src="img/gif/princess-kate.gif" width="480" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-6 gifs-column mb-4">
+                    <iframe src="https://giphy.com/embed/VbEq7lhC0gVMFUX819" width="480" height="398" style="width: 100%;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                    <div class="hidden">
+                        <iframe src="https://giphy.com/embed/FPKTK1Q4PwWc0" width="480" height="269" style="width: 100%;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <iframe src="https://giphy.com/embed/rLNRhImy407URFIDnX" width="480" height="480" style="width: 100%;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <img src="img/gif/22.gif" width="480" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <button id="show-more" class="btn btn-transparent">Show More</button>
+            </div>
+        </div>
+
+        <div id="gallery" class="bordered-row mt-4">
+            <h2 class="title">Gallery</h2>
+            <div class="row gallery-row">
+                <div class="col-md-4 mb-4 gallery-column">
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_1652.JPG" alt="Gallery Image 1" class="img-fluid" data-toggle="modal" data-target="#galleryModal1">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_0393.jpg" alt="Gallery Image 5" class="img-fluid" data-toggle="modal" data-target="#galleryModal5">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_3167.jpg" alt="Gallery Image 6" class="img-fluid" data-toggle="modal" data-target="#galleryModal6">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_1443.JPG" alt="Gallery Image 9" class="img-fluid" data-toggle="modal" data-target="#galleryModal9">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_0362.jpg" alt="Gallery Image 13" class="img-fluid" data-toggle="modal" data-target="#galleryModal13">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230121_083026.jpg" alt="Gallery Image 16" class="img-fluid" data-toggle="modal" data-target="#galleryModal16">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-1651.jpg" alt="Gallery Image 19" class="img-fluid" data-toggle="modal" data-target="#galleryModal19">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-0395.jpg" alt="Gallery Image 22" class="img-fluid" data-toggle="modal" data-target="#galleryModal22">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230403_201419_01.jpg" alt="Gallery Image 25" class="img-fluid" data-toggle="modal" data-target="#galleryModal25">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230420_003650_01.jpg" alt="Gallery Image 28" class="img-fluid" data-toggle="modal" data-target="#galleryModal28">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230403_003950_627.jpg" alt="Gallery Image 31" class="img-fluid" data-toggle="modal" data-target="#galleryModal31">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_0400.jpg" alt="Gallery Image 34" class="img-fluid" data-toggle="modal" data-target="#galleryModal34">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 gallery-column">
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_0353.jpg" alt="Gallery Image 2" class="img-fluid" data-toggle="modal" data-target="#galleryModal2">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_1589.jpeg" alt="Gallery Image 7" class="img-fluid" data-toggle="modal" data-target="#galleryModal7">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_0368.jpg" alt="Gallery Image 12" class="img-fluid" data-toggle="modal" data-target="#galleryModal12">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230425_134108_01.jpg" alt="Gallery Image 14" class="img-fluid" data-toggle="modal" data-target="#galleryModal14">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230502_103024_202.jpg" alt="Gallery Image 17" class="img-fluid" data-toggle="modal" data-target="#galleryModal17">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-6079.jpg" alt="Gallery Image 20" class="img-fluid" data-toggle="modal" data-target="#galleryModal20">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230305_194309_01(1).jpg" alt="Gallery Image 23" class="img-fluid" data-toggle="modal" data-target="#galleryModal23">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-6075.jpg" alt="Gallery Image 26" class="img-fluid" data-toggle="modal" data-target="#galleryModal26">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-1653.jpg" alt="Gallery Image 29" class="img-fluid" data-toggle="modal" data-target="#galleryModal29">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-0490.jpg" alt="Gallery Image 32" class="img-fluid" data-toggle="modal" data-target="#galleryModal32">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230418_193003_682.jpg" alt="Gallery Image 35" class="img-fluid" data-toggle="modal" data-target="#galleryModal35">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 gallery-column">
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_9249.jpg" alt="Gallery Image 3" class="img-fluid" data-toggle="modal" data-target="#galleryModal3">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_0477.JPG" alt="Gallery Image 4" class="img-fluid" data-toggle="modal" data-target="#galleryModal4">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG33956307919843529.jpg" alt="Gallery Image 8" class="img-fluid" data-toggle="modal" data-target="#galleryModal8">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_1154.JPG" alt="Gallery Image 10" class="img-fluid" data-toggle="modal" data-target="#galleryModal10">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_4939.jpg" alt="Gallery Image 11" class="img-fluid" data-toggle="modal" data-target="#galleryModal11">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/IMG_1364.jpg" alt="Gallery Image 15" class="img-fluid" data-toggle="modal" data-target="#galleryModal15">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230418_193000_564.jpg" alt="Gallery Image 18" class="img-fluid" data-toggle="modal" data-target="#galleryModal18">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-2657.jpg" alt="Gallery Image 21" class="img-fluid" data-toggle="modal" data-target="#galleryModal21">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-1652.jpg" alt="Gallery Image 24" class="img-fluid" data-toggle="modal" data-target="#galleryModal24">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG_20230401_160445(1).jpg" alt="Gallery Image 27" class="img-fluid" data-toggle="modal" data-target="#galleryModal27">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-1648.jpg" alt="Gallery Image 30" class="img-fluid" data-toggle="modal" data-target="#galleryModal30">
+                    </div>
+                    <div class="gradient-border-wrapper">
+                        <img src="img/gallery/new/IMG-2594.jpg" alt="Gallery Image 33" class="img-fluid" data-toggle="modal" data-target="#galleryModal33">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Modals for gallery images -->
+        <div class="modal fade" id="galleryModal1" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_1652.JPG" alt="Gallery Image 1" class="img-fluid">
+                        <p class="modal-caption">Beatissima Ball</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal2" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_0353.jpg" alt="Gallery Image 2" class="img-fluid">
+                        <p class="modal-caption">Bar Crawl at Cheers 🥂</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal3" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_9249.jpg" alt="Gallery Image 3" class="img-fluid">
+                        <p class="modal-caption">Adam's Graduation Brunch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal4" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_0477.JPG" alt="Gallery Image 4" class="img-fluid">
+                        <p class="modal-caption">Drag Protest</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal5" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_0393.jpg" alt="Gallery Image 5" class="img-fluid">
+                        <p class="modal-caption">Bar Crawl at Corby's 🍻</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal6" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel6" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_3167.jpg" alt="Gallery Image 6" class="img-fluid">
+                        <p class="modal-caption">Restocking at Crossings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal7" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel7" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_1589.jpeg" alt="Gallery Image 7" class="img-fluid">
+                        <p class="modal-caption">Deploraball</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal8" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel8" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG33956307919843529.jpg" alt="Gallery Image 8" class="img-fluid">
+                        <p class="modal-caption">Skeet Shooting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal9" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel9" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_1443.JPG" alt="Gallery Image 9" class="img-fluid">
+                        <p class="modal-caption">Deploraball ☝️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal10" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel10" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_1154.JPG" alt="Gallery Image 10" class="img-fluid">
+                        <p class="modal-caption">Beatissima Ball</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal11" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel11" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_4939.jpg" alt="Gallery Image 11" class="img-fluid">
+                        <p class="modal-caption">Senior Game vs. Wake Forest</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal12" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel12" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_0368.jpg" alt="Gallery Image 12" class="img-fluid">
+                        <p class="modal-caption">Bar Crawl at Corby's</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal13" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel13" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_0362.jpg" alt="Gallery Image 13" class="img-fluid">
+                        <p class="modal-caption">Bar Crawl at Barcade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal14" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel14" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230425_134108_01.jpg" alt="Gallery Image 14" class="img-fluid">
+                        <p class="modal-caption">Football Game</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal15" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel15" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_1364.jpg" alt="Gallery Image 15" class="img-fluid">
+                        <p class="modal-caption">Crossings Christmas Party</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="galleryModal16" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel16" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230121_083026.jpg" alt="Gallery Image 16" class="img-fluid">
+                        <p class="modal-caption">D.C. Subway</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal17" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel17" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230502_103024_202.jpg" alt="Gallery Image 17" class="img-fluid">
+                        <p class="modal-caption">Unvaxxed Party</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal18" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel18" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230418_193000_564.jpg" alt="Gallery Image 18" class="img-fluid">
+                        <p class="modal-caption">Walker Hayes Concert 🤠</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal19" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel19" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-1651.jpg" alt="Gallery Image 19" class="img-fluid">
+                        <p class="modal-caption">Clemson Game 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal20" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel20" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-6079.jpg" alt="Gallery Image 20" class="img-fluid">
+                        <p class="modal-caption">South Bend March for Life ft. Newfs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal21" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel21" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-2657.jpg" alt="Gallery Image 21" class="img-fluid">
+                        <p class="modal-caption">Karaoke Night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal22" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel22" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-0395.jpg" alt="Gallery Image 22" class="img-fluid">
+                        <p class="modal-caption">Bar Crawl at Corby's</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal23" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel23" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230305_194309_01(1).jpg" alt="Gallery Image 23" class="img-fluid">
+                        <p class="modal-caption">Cozy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal24" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel24" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-1652.jpg" alt="Gallery Image 24" class="img-fluid">
+                        <p class="modal-caption">Advent Party</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal25" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel25" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230403_201419_01.jpg" alt="Gallery Image 25" class="img-fluid">
+                        <p class="modal-caption">Beatissima Ball Preparations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal26" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel26" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-6075.jpg" alt="Gallery Image 26" class="img-fluid">
+                        <p class="modal-caption">South Bend March for Life ft. Fr. Miscamble</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal27" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel27" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230401_160445(1).jpg" alt="Gallery Image 27" class="img-fluid">
+                        <p class="modal-caption">Sam Delmer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal28" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel28" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230420_003650_01.jpg" alt="Gallery Image 28" class="img-fluid">
+                        <p class="modal-caption">Tea Party</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal29" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel29" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-1653.jpg" alt="Gallery Image 29" class="img-fluid">
+                        <p class="modal-caption">Dunes Trip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal30" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel30" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-1648.jpg" alt="Gallery Image 30" class="img-fluid">
+                        <p class="modal-caption">Melot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal31" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel31" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230403_003950_627.jpg" alt="Gallery Image 31" class="img-fluid">
+                        <p class="modal-caption">Beatissima Ball (promised picture)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal32" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel32" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-0490.jpg" alt="Gallery Image 32" class="img-fluid">
+                        <p class="modal-caption">Football Game</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal33" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel33" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG-2594.jpg" alt="Gallery Image 33" class="img-fluid">
+                        <p class="modal-caption">Zoo Trip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal34" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel34" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/IMG_0400.jpg" alt="Gallery Image 34" class="img-fluid">
+                        <p class="modal-caption">Bar Crawl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="galleryModal35" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel35" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="img/gallery/new/IMG_20230418_193003_682.jpg" alt="Gallery Image 35" class="img-fluid">
+                        <p class="modal-caption">Walker Hayes Concert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p> </p>    
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3sgUwTOoovgXqIMufxDKzX?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <footer class="mt-4 text-center">
+            <p class="mt-2">Happy Birthday. From Jose.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.getElementById('show-more').addEventListener('click', function () {
+            var hiddenGifs = document.querySelectorAll('.hidden');
+            var gifsContainers = document.querySelectorAll('.gifs-row .col-md-6'); // GIF containers in each column
+        
+            if (this.textContent === 'Show More') {
+                hiddenGifs.forEach(function (gif) {
+                    gif.classList.remove('hidden');
+                });
+                this.textContent = 'Show Less';
+            } else {
+                // Hide all GIFs except the first one in each column
+                gifsContainers.forEach(function (container) {
+                    var gifs = container.querySelectorAll('.giphy-embed, .img-fluid');
+                    gifs.forEach(function (gif, index) {
+                        if (index > 0) {  // Keep only the first GIF visible
+                            gif.parentElement.classList.add('hidden');
+                        }
+                    });
+                });
+                this.textContent = 'Show More';
+                window.scrollTo(0, document.querySelector('.bordered-row.mt-4').offsetTop);
+            }
+        });
+        </script>
+        
+
+</body>
+</html>
